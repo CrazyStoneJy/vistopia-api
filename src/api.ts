@@ -73,10 +73,13 @@ async function downloadEpisodes(collection_id: Collection['id'], output_dir: str
 }
 
 async function downloadEpisode(episode_id: Episode['id'], output_dir: string = DEFAULT_RESOURCES_DIRCTORY) {
-    const EpisodeUrl: EpisodeUrl = await findEpisodeUrl(episode_id);
-    const { title } = EpisodeUrl || {};
+    const episodeUrl: EpisodeUrl | null = await findEpisodeUrl(episode_id);
+    if (!episodeUrl) {
+        return;
+    }
+    const { title } = episodeUrl || {};
     console.log(`start download ${title}`);
-    await downloadEpisodeByUrl(EpisodeUrl, output_dir);
+    await downloadEpisodeByUrl(episodeUrl, output_dir);
     console.log(`${title}.mp3 download successfully.`);
 }
 
