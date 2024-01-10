@@ -4,10 +4,12 @@ import {
     search,
     findEpisodes
 } from './api';
+import { log } from './logs';
 
 export {
     downloadEpisodes,
     downloadEpisode,
     search,
-    findEpisodes
+    findEpisodes,
+    log
 }
