@@ -1,11 +1,11 @@
 {
   "name": "vistopia-api",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "api of vistopia",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "files": ["dist", "LICENSE", "README.md", "package.json"],
+  "files": ["dist"],
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.json",
