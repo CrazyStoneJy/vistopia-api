@@ -1,6 +1,6 @@
 {
   "name": "vistopia-api",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "api of vistopia",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

@@ -15,7 +15,7 @@ type Collection = {
 
 type Episode = Collection;
 
-export const DEFAULT_RESOURCES_DIRCTORY = "./resources";
+export const DEFAULT_RESOURCES_DIRCTORY = "./";
 
 async function findEpisodes(collection_id: Collection['id']): Promise<Array<Episode> | null> {
     const url = `https://api.vistopia.com.cn/api/v1/content/article_list?content_id=${collection_id}&count=100&sort=0&reverse=0&since_id=473994&is_all_data=1`;
